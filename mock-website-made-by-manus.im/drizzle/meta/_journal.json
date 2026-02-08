@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1768868613845,
+      "tag": "0000_perfect_paladin",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1768869006311,
+      "tag": "0001_safe_the_enforcers",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1769048606342,
+      "tag": "0002_mute_nehzno",
+      "breakpoints": true
+    }
+  ]
+}
