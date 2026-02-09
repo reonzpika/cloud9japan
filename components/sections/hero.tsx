@@ -40,7 +40,7 @@ export function Hero() {
           
           {/* Feature Badge */}
           <div className="py-4">
-            <div className="inline-block bg-white/50 backdrop-blur-sm p-6 rounded-lg border-2 border-indigo">
+            <div className="inline-block bg-indigo-light p-6 rounded-lg border-2 border-indigo">
               <p className="text-lg font-bold text-indigo mb-2">
                 同じものは二つとない
               </p>
