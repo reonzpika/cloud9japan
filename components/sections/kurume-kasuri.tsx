@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function KurumeKasuri() {
   return (
-    <section className="py-16 md:py-24 bg-kinari-light">
+    <section className="py-16 md:py-24 bg-indigo-light">
       <div className="container">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

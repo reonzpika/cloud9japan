@@ -92,7 +92,7 @@ export function Products() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-8 bg-kinari-light rounded-lg space-y-3"
+                className="p-8 bg-indigo-light rounded-lg space-y-3"
               >
                 <h3 className="text-xl font-serif font-semibold text-indigo text-center">
                   {card.title}

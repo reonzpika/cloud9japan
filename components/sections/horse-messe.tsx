@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function HorseMesse() {
   return (
-    <section id="horse-messe-section" className="py-16 md:py-24 bg-kinari-light">
+    <section id="horse-messe-section" className="py-16 md:py-24 bg-indigo-light">
       <div className="container">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export function HorseMesse() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="p-8 md:p-12 border-2 border-indigo rounded-lg bg-kinari-light space-y-6">
+          <div className="p-8 md:p-12 border-2 border-indigo rounded-lg bg-white space-y-6">
             <div className="text-center space-y-4">
               <span className="inline-block px-4 py-2 bg-indigo text-white text-sm font-bold rounded-full">
                 2026年2月21日(土)・22日(日)・23日(月・祝)
