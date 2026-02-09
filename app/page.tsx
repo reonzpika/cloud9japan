@@ -1,3 +1,4 @@
+import { Header } from '@/components/sections/header'
 import { AlertBar } from '@/components/sections/alert-bar'
 import { Hero } from '@/components/sections/hero'
 import { YokoStory } from '@/components/sections/yoko-story'
@@ -13,6 +14,7 @@ import { Footer } from '@/components/sections/footer'
 export default function Home() {
   return (
     <main>
+      <Header />
       <AlertBar />
       <Hero />
       <YokoStory />
