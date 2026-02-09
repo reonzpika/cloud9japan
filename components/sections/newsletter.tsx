@@ -30,7 +30,7 @@ export function Newsletter() {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-artisan-gold text-white font-medium rounded-md hover:bg-artisan-gold/90 transition-colors disabled:opacity-50"
+              className="px-6 py-3 bg-indigo hover:bg-indigo-dark text-white font-medium rounded-md transition-colors disabled:opacity-50"
               disabled
             >
               最新情報を受け取る

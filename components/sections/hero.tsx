@@ -40,7 +40,7 @@ export function Hero() {
           
           {/* Feature Badge */}
           <div className="py-4">
-            <div className="inline-block bg-white/50 backdrop-blur-sm p-6 rounded-lg border-2 border-artisan-gold">
+            <div className="inline-block bg-white/50 backdrop-blur-sm p-6 rounded-lg border-2 border-indigo">
               <p className="text-lg font-bold text-indigo mb-2">
                 同じものは二つとない
               </p>
@@ -78,7 +78,7 @@ export function Hero() {
               href="https://instagram.com/cloudnine1017"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-indigo hover:text-artisan-gold font-medium underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-indigo hover:bg-indigo-dark text-white font-medium text-lg rounded-md transition-all duration-300 active:scale-95"
             >
               📱 Instagramで制作過程を見る
             </a>

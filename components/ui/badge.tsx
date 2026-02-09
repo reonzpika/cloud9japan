@@ -16,7 +16,7 @@ export function Badge({
       className={cn(
         "inline-block px-4 py-2 text-sm font-bold rounded-full",
         variant === 'default' && "bg-kinari-light border-2 border-indigo text-indigo",
-        variant === 'popular' && "bg-terracotta text-white",
+        variant === 'popular' && "bg-indigo text-white",
         variant === 'heritage' && "bg-artisan-gold text-white",
         className
       )}
