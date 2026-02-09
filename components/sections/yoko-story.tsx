@@ -24,26 +24,33 @@ export function YokoStory() {
                 8歳の出会い
               </h3>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                アメリカで初めて馬に会った時、「これだ！」と直感しました。でも、家族からは馬禁止令が出て（笑）、馬を見ることすらNGに。
+                アメリカで初めて馬に触れた時、「この動物と生きていきたい」と確信しました。けれど家族の事情で、馬との暮らしは夢のまま40年が過ぎました。
               </p>
             </div>
 
-            {/* 40年後の再会 */}
+            {/* Marshallとの出会いが、すべてを変えた */}
             <div className="space-y-3">
               <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
-                40年後の再会
+                Marshallとの出会いが、すべてを変えた
               </h3>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                それから40年。こっそり乗馬クラブに通い始めて、Marshallに出会いました。Marshallは菊花賞っていう凄いその年の優秀な選ばれしトップ3歳馬十八頭で走るレースも出た事あるの。でも脚を痛めて引退して、なぜかど素人のお母さんの所にやってきたの。
+                40年後、ふとしたきっかけで訪れた乗馬クラブで、Marshallに出会いました。彼は菊花賞を走った元競走馬。脚を痛めて引退し、なぜか私のもとにやってきました。
               </p>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                馬は1メートル遠くから人間の心臓が聴こえるから、私が調子悪い時にそっと寄り添ってくれて、子育て時代はよく助けられた。その後Lucasも家族に加わりました。
+                馬は1メートル離れた場所から人の心臓の音が聴こえると言われています。Marshallは私が疲れている日にはそっと寄り添い、子育てで心が折れそうな時も静かに支えてくれました。彼は、私にとって家族であり、友であり、人生の先生です。
+              </p>
+            </div>
+
+            {/* Lucasとの日々 */}
+            <div className="space-y-3">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
+                Lucasとの日々
+              </h3>
+              <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
+                その後、Lucasが家族に加わりました。彼は3歳での引退を余儀なくされた若い馬で、人への不信感を抱えていました。時間をかけて少しずつ心を開いてくれるようになり、今も一緒に成長を続けています。この3月には、彼と初めての競技会に出る予定です。
               </p>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                Lucasはそれと対照的で今からが走る年齢の3歳を前に引退。あまり早く走れないし、噛みつくわ、蹴るわでとっても悪い子だったけど、多分ひどい目に遭ってたんだろうと思って、ど素人の私が更生させようと思って引き取ったのよ。今でもまだヤンチャなんだけど、それでも少しずつ良い子になってきてるから、諦めずに頑張ろうと思う。3月にはLucasと競技会に出る予定。
-              </p>
-              <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                今では、二頭と過ごす時間が私の人生の中心です。MarshallとLucasは、ただのペットではありません。家族であり、友達であり、人生の先生です。彼らと一緒にいる時間は、何にも代えられない宝物です。
+                二頭と過ごす時間が、今の私の人生の中心です。
               </p>
             </div>
 
@@ -53,13 +60,13 @@ export function YokoStory() {
                 Cloud Nineを始めた理由
               </h3>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                日本では馬の小物があまり店頭に並んでいなくて、「ないなら自分で作ろう」と思ったんです。馬好きとして、本当に欲しいものを。自分が使いたいと思えるものを。
+                馬好きのための上質な小物が、日本にはほとんどありません。「ないなら、自分が作ろう」。そう思って久留米絣と出会い、一つひとつ手で縫い始めました。
               </p>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                そして、もう一つ。<strong className="text-indigo font-semibold">一頭でも多くの馬に、より良い暮らしを届けたい</strong>という想いがあります。私ができることは小さいかもしれませんが、MarshallとLucas、そして出会うすべての馬たちのために、できる限りのことをしたい。
+                そしてもう一つ。<strong className="text-indigo font-semibold">一頭でも多くの馬に、より良い暮らしを届けたい</strong>。MarshallとLucas、そして出会うすべての馬たちのために、私にできることを続けていきたいと思っています。
               </p>
               <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                午年の今年、ホースメッセで同じ想いを持つ皆さまとお会いできることを楽しみにしています。
+                午年の今年、ホースメッセで同じ想いを持つ皆さまとお会いできることを、心から楽しみにしています。
               </p>
             </div>
           </div>
