@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export function CarrotPouch() {
@@ -15,10 +16,14 @@ export function CarrotPouch() {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="aspect-square bg-white rounded-lg overflow-hidden shadow-lg">
-              <div className="w-full h-full flex items-center justify-center text-indigo-muted p-8 text-center">
-                [Carrot Pouch Image Placeholder: Multiple pattern variations showing uniqueness]
-              </div>
+            <div className="aspect-square bg-white rounded-lg overflow-hidden shadow-lg relative">
+              <Image
+                src="/images/samples/S__64815238_0.jpg"
+                alt="にんじんポーチ - 久留米絣"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             
             {/* Content */}

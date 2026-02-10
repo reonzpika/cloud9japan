@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 
@@ -24,42 +25,48 @@ const products = [
     name: "久留米絣 ショルダー",
     description: "手織り職人が織った藍染めの久留米絣に、母子の馬を刺繍。Yokoが一つひとつミシンで丁寧に縫い上げた、毎日使えるショルダーバッグです。使い込むほどに柔らかく、あなただけの風合いに育っていきます。",
     price: "¥[価格]",
-    popular: false
+    popular: false,
+    image: "/images/samples/S__65011745_0.jpg"
   },
   {
     id: 2,
     name: "横長ショルダー（大）",
     description: "たっぷり入る大きめサイズ。厩舎への外出や、週末のお出かけに。久留米絣の美しい藍の深みが、どんなスタイルにも馴染みます。Yokoの手作りです。",
     price: "¥[価格]",
-    popular: false
+    popular: false,
+    image: "/images/samples/S__65011746_0.jpg"
   },
   {
     id: 3,
     name: "ハンカチ",
     description: "毎日持ち歩きたい、久留米絣のハンカチ。様々な柄からお選びいただけます。使うたびに柔らかくなり、藍の色が美しく変化していきます。馬好きへのちょっとした贈り物にも最適です。",
     price: "¥[価格]",
-    popular: true
+    popular: true,
+    image: "/images/samples/S__65019907_0.jpg"
   },
   {
     id: 4,
     name: "にんじんポーチ",
     description: "馬好きなら思わず笑顔になる、にんじんストラップ付きポーチ。久留米絣の様々な柄から、お好きなデザインをお選びいただけます。Yokoが一つひとつ手作りしています。",
     price: "¥[価格]",
-    popular: true
+    popular: true,
+    image: "/images/samples/S__65019908_0.jpg"
   },
   {
     id: 5,
     name: "キーホルダー",
     description: "いつも一緒に。鍵やバッグに付けて、久留米絣の手触りを身近に感じてください。小さくても、職人の手仕事とYokoの丁寧な仕上げがしっかりと息づいています。",
     price: "¥[価格]",
-    popular: false
+    popular: false,
+    image: "/images/samples/S__65019909_0.jpg"
   },
   {
     id: 6,
     name: "ミニショルダー",
     description: "必要最低限のものだけを入れて、身軽にお出かけ。ちょっとした外出や、厩舎での作業にちょうどいいサイズです。Yokoが一つひとつ心を込めて作っています。",
     price: "¥[価格]",
-    popular: false
+    popular: false,
+    image: "/images/samples/S__65019910_0.jpg"
   }
 ]
 
@@ -116,10 +123,14 @@ export function Products() {
                 className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Image */}
-                <div className="aspect-square bg-kinari-light overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-indigo-muted p-8 text-center text-sm transition-transform duration-500 group-hover:scale-105">
-                    [{product.name} Image Placeholder]
-                  </div>
+                <div className="aspect-square bg-kinari-light overflow-hidden relative">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 
                 {/* Content */}

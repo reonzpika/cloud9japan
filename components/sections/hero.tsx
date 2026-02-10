@@ -1,23 +1,36 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
+
+const HERO_IMAGE = '/images/samples/S__64815237_0.jpg'
 
 export function Hero() {
   return (
     <section className="relative min-h-[85vh] flex flex-col md:flex-row">
       {/* Mobile Image */}
-      <div className="md:hidden w-full h-[55vh] relative bg-kinari-light">
-        <div className="w-full h-full flex items-center justify-center text-indigo-muted text-sm">
-          [Hero Image Placeholder: Yoko with Marshall and/or Lucas]
-        </div>
+      <div className="md:hidden w-full h-[55vh] relative bg-kinari-light overflow-hidden">
+        <Image
+          src={HERO_IMAGE}
+          alt="Cloud Nine - 馬を愛するあなたへ"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
       </div>
       
       {/* Desktop Image */}
-      <div className="hidden md:block md:w-1/2 relative bg-kinari-light">
-        <div className="w-full h-full flex items-center justify-center text-indigo-muted">
-          [Hero Image Placeholder: Yoko with Marshall and/or Lucas]
-        </div>
+      <div className="hidden md:block md:w-1/2 relative bg-kinari-light overflow-hidden min-h-[85vh]">
+        <Image
+          src={HERO_IMAGE}
+          alt="Cloud Nine - 馬を愛するあなたへ"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
       </div>
       
       {/* Text Content */}
