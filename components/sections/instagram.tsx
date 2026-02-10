@@ -1,11 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import type { InstagramPost } from '@/lib/instagram'
-
-const INSTAGRAM_PROFILE_URL = 'https://www.instagram.com/cloudnine1017'
 
 const instagramImages = [
   '/images/samples/S__65019911_0.jpg',
@@ -24,38 +20,6 @@ const hashtags = [
 ]
 
 export function Instagram() {
-  const [posts, setPosts] = useState<InstagramPost[] | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
-
-  useEffect(() => {
-    fetch('/api/instagram')
-      .then((res) => {
-        const contentType = res.headers.get('content-type')
-        if (!contentType?.includes('application/json')) {
-          throw new Error('Invalid response')
-        }
-        return res.json()
-      })
-      .then((data: { posts?: InstagramPost[]; error?: string }) => {
-        const list = Array.isArray(data.posts) ? data.posts : []
-        if (list.length > 0) {
-          setPosts(list)
-        } else {
-          setPosts([])
-        }
-        setError(list.length === 0)
-      })
-      .catch(() => {
-        setPosts([])
-        setError(true)
-      })
-      .finally(() => setLoading(false))
-  }, [])
-
-  const showLivePosts = !loading && posts && posts.length > 0
-  const showFallback = !loading && (!posts || posts.length === 0)
-
   return (
     <section className="py-16 md:py-24 bg-kinari-light">
       <div className="container">
@@ -81,60 +45,20 @@ export function Instagram() {
 
           {/* Instagram Post Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-8">
-            {showLivePosts &&
-              posts!.map((post) => (
-                <a
-                  key={post.id}
-                  href={post.permalink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="aspect-square relative block bg-white rounded-lg shadow-md overflow-hidden"
-                  aria-label="View Instagram post"
-                >
-                  <Image
-                    src={post.media_url || post.thumbnail_url || ''}
-                    alt={post.caption || 'Instagram post'}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                </a>
-              ))}
-            {loading &&
-              instagramImages.map((src, i) => (
-                <div
-                  key={i}
-                  className="aspect-square relative bg-white rounded-lg shadow-md overflow-hidden"
-                >
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    className="object-cover rounded-lg opacity-70"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                  {i === 0 && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg">
-                      <span className="text-white text-sm">Loading…</span>
-                    </div>
-                  )}
-                </div>
-              ))}
-            {showFallback &&
-              instagramImages.map((src, i) => (
-                <div
-                  key={i}
-                  className="aspect-square relative bg-white rounded-lg shadow-md overflow-hidden"
-                >
-                  <Image
-                    src={src}
-                    alt={`Instagram post ${i + 1}`}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                </div>
-              ))}
+            {instagramImages.map((src, i) => (
+              <div
+                key={i}
+                className="aspect-square relative bg-white rounded-lg shadow-md overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt={`Instagram post ${i + 1}`}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </div>
+            ))}
           </div>
 
           {/* Hashtags */}
@@ -152,7 +76,7 @@ export function Instagram() {
           {/* CTA */}
           <div className="pt-4">
             <a
-              href={INSTAGRAM_PROFILE_URL}
+              href="https://www.instagram.com/cloudnine1017"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-indigo hover:bg-indigo-dark text-white font-medium text-lg rounded-md transition-all duration-300 active:scale-95"
