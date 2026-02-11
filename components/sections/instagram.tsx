@@ -1,16 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-
-const instagramImages = [
-  '/images/samples/S__65019911_0.jpg',
-  '/images/samples/S__65118217.jpg',
-  '/images/samples/S__65175587.jpg',
-  '/images/samples/S__65175589.jpg',
-  '/images/samples/S__65249307.jpg',
-  '/images/samples/S__64815237_0.jpg'
-]
 
 const hashtags = [
   "#ホースメッセ2026",
@@ -41,24 +31,6 @@ export function Instagram() {
             <p className="text-base text-indigo-muted">
               手作業で一つ一つ作られる過程や、馬たちとの何気ない瞬間を、ぜひご覧ください。
             </p>
-          </div>
-
-          {/* Instagram Post Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-8">
-            {instagramImages.map((src, i) => (
-              <div
-                key={i}
-                className="aspect-square relative bg-white rounded-lg shadow-md overflow-hidden"
-              >
-                <Image
-                  src={src}
-                  alt={`Instagram post ${i + 1}`}
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-              </div>
-            ))}
           </div>
 
           {/* Hashtags */}

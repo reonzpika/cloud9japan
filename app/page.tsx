@@ -8,7 +8,6 @@ import { KurumeKasuri } from '@/components/sections/kurume-kasuri'
 import { Functions } from '@/components/sections/functions'
 import { HorseMesse } from '@/components/sections/horse-messe'
 import { Instagram } from '@/components/sections/instagram'
-import { Newsletter } from '@/components/sections/newsletter'
 import { Footer } from '@/components/sections/footer'
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <Functions />
       <HorseMesse />
       <Instagram />
-      <Newsletter />
       <Footer />
     </main>
   )

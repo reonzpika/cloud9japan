@@ -104,23 +104,8 @@ export function CarrotPouch() {
                 </p>
                 
                 <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                  このポーチを見た馬好きの方は、必ず「可愛い！」と言ってくださいます。Yokoが一つひとつ手作りしているので、同じ柄は二つとありません。
+                  このポーチを見た馬好きの方は、必ず「可愛い！」と言ってくださいます。
                 </p>
-              </div>
-              
-              <div className="pt-4">
-                <p className="text-2xl md:text-3xl font-bold text-indigo mb-4">
-                  ¥[実際の価格]
-                </p>
-                
-                <a 
-                  href="https://instagram.com/cloudnine1017"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-indigo hover:text-artisan-gold font-medium underline-offset-4 hover:underline transition-colors"
-                >
-                  Instagramで他のデザインを見る →
-                </a>
               </div>
             </div>
           </div>
