@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 
-const HERO_IMAGE = '/images/samples/S__64815237_0.jpg'
+const HERO_IMAGE = '/images/homepage/hero-image-potrait.png'
 
 export function Hero() {
   return (
