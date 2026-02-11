@@ -54,7 +54,7 @@ export function KurumeKasuri() {
           
           <div className="text-center pt-4">
             <a 
-              href="#" 
+              href="/about-kurumekasuri" 
               className="inline-flex items-center text-indigo hover:text-artisan-gold font-medium underline-offset-4 hover:underline transition-colors"
             >
               久留米絣について詳しく →
