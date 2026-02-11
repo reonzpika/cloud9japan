@@ -7,15 +7,18 @@ import { Badge } from '@/components/ui/badge'
 const featureCards = [
   {
     title: "職人の手織り久留米絣",
-    description: "わずか2人の職人が手織りした、本物の久留米絣です。織りの過程で糸が自然に動くため、同じ柄は物理的に作れません。"
+    description: "わずか2人の職人が手織りした、本物の久留米絣です。織りの過程で糸が自然に動くため、同じ柄は物理的に作れません。",
+    image: "/images/homepage/kurume-kasuri-process.png"
   },
   {
     title: "一つひとつ、Yokoの手作り",
-    description: "すべての製品を、Yokoがミシンで丁寧に縫い上げています。デザインから制作まで、一人で。だから、想いが伝わります。"
+    description: "すべての製品を、Yokoがミシンで丁寧に縫い上げています。デザインから制作まで、一人で。だから、想いが伝わります。",
+    image: "/images/homepage/yoko-working.png"
   },
   {
     title: "日本製の確かな品質",
-    description: "細部まで丁寧に仕上げた、長く使える製品。使い込むほどに柔らかく、味わい深くなります。"
+    description: "細部まで丁寧に仕上げた、長く使える製品。使い込むほどに柔らかく、味わい深くなります。",
+    image: "/images/homepage/kurume-kasuri-label-close-up.png"
   }
 ]
 
@@ -101,6 +104,15 @@ export function Products() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="p-8 bg-indigo-light rounded-lg space-y-3"
               >
+                <div className="aspect-square relative w-full overflow-hidden rounded-lg bg-white/50">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 384px"
+                  />
+                </div>
                 <h3 className="text-xl font-serif font-semibold text-indigo text-center">
                   {card.title}
                 </h3>
