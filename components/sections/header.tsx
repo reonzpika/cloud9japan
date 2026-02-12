@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-indigo shadow-md">
+    <header className="sticky top-0 z-50 bg-indigo shadow-md overflow-visible">
       <div className="container">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-10">
           <Link 
             href="/" 
-            className="flex items-center gap-2 text-2xl md:text-3xl font-serif font-bold text-kinari hover:text-artisan-gold transition-colors"
+            className="flex items-center gap-2 text-2xl md:text-3xl font-serif font-bold text-kinari hover:text-artisan-gold transition-colors overflow-visible"
           >
             <Image
               src="/logos/Logo_illustration.png"
@@ -20,9 +20,9 @@ export function Header() {
             <Image
               src="/logos/Logo_text_light.png"
               alt="Cloud Nine"
-              width={144}
-              height={43}
-              className="h-10 w-auto md:h-11"
+              width={96}
+              height={32}
+              className="h-8 w-auto"
             />
           </Link>
         </div>
