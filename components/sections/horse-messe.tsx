@@ -64,11 +64,12 @@ export function HorseMesse() {
                 width={1200}
                 height={800}
                 className="w-full h-auto"
+                priority
                 unoptimized
               />
             </div>
             <p className="text-center text-indigo-muted">
-              Cloud Nineは <strong className="text-indigo font-bold">F列6番（F6）</strong> でお待ちしています。正面玄関から入り、厩舎エリアのF列へお進みください。
+              Cloud Nineは <strong className="text-indigo font-bold">F列6番（F6）</strong> でお待ちしています。厩舎エリアのF列へお進みください。
             </p>
           </div>
 
@@ -84,7 +85,7 @@ export function HorseMesse() {
               </p>
               
               <p>
-                ショルダーバッグ、にんじんポーチ、馬の刺繍入りハンカチ、久留米絣のぬいぐるみ馬——すべてYokoの手作りによる一点ものです。
+                ショルダーバッグ、にんじんポーチ、馬の刺繍入りハンカチ、久留米絣のぬいぐるみ馬。すべてYokoの手作りによる一点ものです。
               </p>
               
               <p>
@@ -92,7 +93,7 @@ export function HorseMesse() {
               </p>
               
               <p className="font-semibold text-indigo">
-                3日間ブースにおりますので、お気軽にお声がけください。MarshallとLucasの写真もたくさんご用意していますので、ぜひ遊びにいらしてください。
+                3日間ブースにおりますので、お気軽にお声がけください。
               </p>
               
               <p className="text-center text-lg font-semibold text-indigo pt-4">
@@ -110,7 +111,7 @@ export function HorseMesse() {
                 </p>
                 
                 <p className="text-indigo-muted leading-relaxed">
-                  馬の行動学、中国医学から読み解く馬の性格、ライダーのための姿勢づくり、馬の歯や蹄の健康、障害馬術の世界、引退競走馬の未来——専門家や現役トップライダーによる講習会は、初心者からベテランまで楽しめる内容が揃っています。
+                  馬の行動学、中国医学から読み解く馬の性格、ライダーのための姿勢づくり、馬の歯や蹄の健康、障害馬術の世界、引退競走馬の未来。専門家や現役トップライダーによる講習会は、初心者からベテランまで楽しめる内容が揃っています。
                 </p>
                 
                 <p className="text-indigo font-semibold">
