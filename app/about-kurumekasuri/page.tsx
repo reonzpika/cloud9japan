@@ -6,15 +6,6 @@ import { Header } from '@/components/sections/header'
 import { Footer } from '@/components/sections/footer'
 import { useState, useEffect } from 'react'
 
-// Image Placeholder Component
-function ImagePlaceholder({ label, aspectRatio = 'aspect-video' }: { label: string; aspectRatio?: string }) {
-  return (
-    <div className={`${aspectRatio} bg-indigo-light border-2 border-dashed border-indigo-muted rounded-lg flex items-center justify-center p-6`}>
-      <p className="text-indigo-muted text-center font-medium">{label}</p>
-    </div>
-  )
-}
-
 // Table of Contents Component
 function TableOfContents() {
   const [activeSection, setActiveSection] = useState('')
@@ -126,10 +117,13 @@ export default function AboutKurumeKasuri() {
                     220年、受け継がれてきた手仕事の布
                   </h2>
 
-                  <ImagePlaceholder 
-                    label="久留米絣の布のクローズアップ（藍と白の絣模様のテクスチャー）"
-                    aspectRatio="aspect-[4/3]"
-                  />
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/about-kurumekasuri/kasuri-texture-closeup.png"
+                      alt="久留米絣の布のクローズアップ - 藍と白の絣模様のテクスチャー"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none space-y-6">
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
@@ -164,10 +158,13 @@ export default function AboutKurumeKasuri() {
                     はじまりは、一人の少女の「なぜ？」
                   </h2>
 
-                  <ImagePlaceholder 
-                    label="井上伝の肖像画やイラスト、または古い絣の復元品"
-                    aspectRatio="aspect-[3/2]"
-                  />
+                  <div className="aspect-[3/2] relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/about-kurumekasuri/inoue-den-discovery.png"
+                      alt="井上伝の発見 - 色褪せた藍染め布がほどかれた瞬間"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none space-y-6">
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
@@ -240,10 +237,13 @@ export default function AboutKurumeKasuri() {
                       柄を決める、もっとも重要な工程
                     </h4>
                     
-                    <ImagePlaceholder 
-                      label="括り作業の工程写真（手で糸を括る様子）"
-                      aspectRatio="aspect-video"
-                    />
+                    <div className="aspect-video relative overflow-hidden rounded-lg">
+                      <img 
+                        src="/images/about-kurumekasuri/process-kukuri-tying.png"
+                        alt="括り作業 - 職人が麻の繊維で糸を括る様子"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
                       図案に従い、染めたくない部分をアラソウ（麻の一種）で一か所ずつ固く括ります。染色中にほどけないように、しかし後で解くときには解きやすいように。この相反する要求を満たすには、熟練の技が必要です。
@@ -262,10 +262,13 @@ export default function AboutKurumeKasuri() {
                       「藍は生きている」
                     </h4>
                     
-                    <ImagePlaceholder 
-                      label="藍甕に糸を浸す工程写真、または藍液の写真"
-                      aspectRatio="aspect-video"
-                    />
+                    <div className="aspect-video relative overflow-hidden rounded-lg">
+                      <img 
+                        src="/images/about-kurumekasuri/process-aizome-dyeing.png"
+                        alt="藍染め工程 - 職人が藍甕に糸を浸す様子"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
                       職人たちがそう語るほど、藍染めは繊細な工程です。タデ科の藍を乾燥させ、水を加えて3ヶ月ほど発酵させた「すくも」を原料に、木灰汁や貝灰を加えて2〜3週間かけて染液を建てます。
@@ -300,10 +303,13 @@ export default function AboutKurumeKasuri() {
                       100年前の織機が、今日も動いている
                     </h4>
                     
-                    <ImagePlaceholder 
-                      label="織機の写真（シャトル織機または手織り機）"
-                      aspectRatio="aspect-video"
-                    />
+                    <div className="aspect-video relative overflow-hidden rounded-lg">
+                      <img 
+                        src="/images/about-kurumekasuri/process-ori-weaving.png"
+                        alt="織り工程 - ヴィンテージのシャトル織機で織る職人"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
                       経糸と緯糸の柄を合わせながら、丹念に一段ずつ織り上げていきます。産地では、100年ほど前に開発されたシャトル織機が現役で使われています。現代の革新織機より織りのスピードがゆるやかなため、柔らかな風合いの生地を織ることができます。
@@ -325,10 +331,13 @@ export default function AboutKurumeKasuri() {
                       自然の光と風で、布が完成する
                     </h4>
                     
-                    <ImagePlaceholder 
-                      label="天日干しの布が風にたなびく写真"
-                      aspectRatio="aspect-video"
-                    />
+                    <div className="aspect-video relative overflow-hidden rounded-lg">
+                      <img 
+                        src="/images/about-kurumekasuri/process-shiage-drying.png"
+                        alt="仕上げ工程 - 久留米絣の反物が屋外で天日干しされている様子"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
                       糊を落とすためにぬるま湯に浸け、水洗いした後、竿にかけて天日でじっくり乾燥させます。多くの工程と人の手をかけてつくられた布が、自然の風にたなびく姿。そこには、時間をかけた手仕事だけが持つ、穏やかな美しさがあります。
@@ -350,10 +359,13 @@ export default function AboutKurumeKasuri() {
                     同じものは二つとない——その理由
                   </h2>
 
-                  <ImagePlaceholder 
-                    label="絣模様のクローズアップ（にじみ・かすれが分かるマクロ写真）"
-                    aspectRatio="aspect-[4/3]"
-                  />
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/about-kurumekasuri/kasuri-no-two-alike.png"
+                      alt="同じ柄の久留米絣を並べた写真 - かすれの違いが見える"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none space-y-6">
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
@@ -410,10 +422,13 @@ export default function AboutKurumeKasuri() {
                     久留米絣の伝統的な染料である天然藍には、美しい色だけでなく、暮らしに役立つ機能が備わっています。何百年もの間、日本人の生活を支えてきた藍の力をご紹介します。
                   </p>
 
-                  <ImagePlaceholder 
-                    label="藍甕の写真、または藍染め糸の美しい藍色"
-                    aspectRatio="aspect-[3/2]"
-                  />
+                  <div className="aspect-[3/2] relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/about-kurumekasuri/indigo-hands.png"
+                      alt="藍染めで染まった職人の手"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   {/* 抗菌 */}
                   <div className="space-y-4 p-6 md:p-8 bg-indigo-light rounded-lg">
@@ -507,10 +522,13 @@ export default function AboutKurumeKasuri() {
                     守り、つなぐ——伝統のいまとこれから
                   </h2>
 
-                  <ImagePlaceholder 
-                    label="現代のKurume Kasuri製品（バッグ、スニーカーなど）の写真"
-                    aspectRatio="aspect-video"
-                  />
+                  <div className="aspect-video relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/about-kurumekasuri/modern-kasuri-colours.png"
+                      alt="カラフルな現代の久留米絣製品のモザイク"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none space-y-6">
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
@@ -555,10 +573,13 @@ export default function AboutKurumeKasuri() {
                     馬を愛する人のための、久留米絣
                   </h2>
 
-                  <ImagePlaceholder 
-                    label="Cloud Nine製品の集合写真（hero画像の再利用可能）"
-                    aspectRatio="aspect-[4/3]"
-                  />
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
+                    <img 
+                      src="/images/homepage/hero-image.png"
+                      alt="Cloud Nine 久留米絣製品 - 馬モチーフのポーチとチャーム"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none space-y-6">
                     <p className="text-base md:text-lg text-indigo-muted leading-relaxed">

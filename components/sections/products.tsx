@@ -57,7 +57,7 @@ export function Products() {
                     src={card.image}
                     alt={card.title}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${index === 2 ? 'scale-[2.04]' : ''}`}
                     sizes="(max-width: 768px) 100vw, 384px"
                   />
                 </div>
