@@ -23,11 +23,11 @@ export function Instagram() {
         >
           <div className="flex justify-center">
             <Image
-              src="/logos/Logo_illustration.png"
+              src="/logos/Logo_with_background.png"
               alt="Cloud Nine"
-              width={120}
-              height={120}
-              className="h-[80px] w-auto"
+              width={480}
+              height={480}
+              className="h-[160px] w-auto"
             />
           </div>
           
