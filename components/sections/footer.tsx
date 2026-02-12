@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
   
@@ -7,7 +9,13 @@ export function Footer() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-serif font-bold">Cloud Nine</h3>
+            <Image
+              src="/logos/Logo_text_light.png"
+              alt="Cloud Nine"
+              width={240}
+              height={80}
+              className="h-8 w-auto"
+            />
             <p className="text-sm text-kinari-light leading-relaxed">
               馬を愛する人のための、手仕事ブランド
             </p>
