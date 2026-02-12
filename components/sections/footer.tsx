@@ -17,7 +17,7 @@ export function Footer() {
               className="h-8 w-auto"
             />
             <p className="text-sm text-kinari-light leading-relaxed">
-              馬を愛する人のための、手仕事ブランド
+              馬とカメラを愛する友人二人の手仕事ブランド
             </p>
           </div>
           

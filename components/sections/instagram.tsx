@@ -42,6 +42,9 @@ export function Instagram() {
             <p className="text-base text-indigo-muted">
               手作業で一つ一つ作られる過程や、馬たちとの何気ない瞬間を、ぜひご覧ください。
             </p>
+            <p className="text-base text-indigo-muted">
+              馬を愛するYokoと、カメラを愛するYukaの二人でお届けしています。
+            </p>
           </div>
 
           {/* Hashtags */}

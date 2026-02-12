@@ -117,6 +117,32 @@ export function YokoStory() {
               </p>
             </div>
           </div>
+
+          {/* Yuka Introduction */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="space-y-3 pt-8 border-t border-indigo-light">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
+                もう一人の仲間、Yuka
+              </h3>
+              <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
+                Cloud Nineは、Yokoひとりのブランドではありません。
+              </p>
+              <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
+                長年の友人であり、カメラを愛するYukaと二人で立ち上げました。Yokoが馬のいる暮らしを久留米絣で届けるように、Yukaはカメラのある暮らしを届ける準備をしています。
+              </p>
+              <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
+                馬とカメラ、好きなものは違うけれど、「好きなものに囲まれた暮らしを、手仕事で届けたい」という想いは同じ。二人の「好き」が出会って、Cloud Nineは生まれました。
+              </p>
+              <p className="text-sm text-indigo-muted/70 italic">
+                Yukaのカメラ部門は、ホースメッセ後にスタート予定です。お楽しみに。
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
