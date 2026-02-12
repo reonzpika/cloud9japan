@@ -13,15 +13,15 @@ export function Header() {
             <Image
               src="/logos/Logo_illustration.png"
               alt="Cloud Nine"
-              width={84}
-              height={84}
-              className="h-[78px] w-auto md:h-[86px]"
+              width={108}
+              height={108}
+              className="h-[54px] w-auto"
             />
             <Image
               src="/logos/Logo_text_light.png"
               alt="Cloud Nine"
-              width={96}
-              height={32}
+              width={288}
+              height={96}
               className="h-8 w-auto"
             />
           </Link>
