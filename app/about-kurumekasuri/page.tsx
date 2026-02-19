@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Header } from '@/components/sections/header'
 import { Footer } from '@/components/sections/footer'
@@ -74,10 +75,12 @@ export default function AboutKurumeKasuri() {
                   </h2>
 
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/about-kurumekasuri/kasuri-texture-closeup.png"
                       alt="久留米絣の布のクローズアップ - 藍と白の絣模様のテクスチャー"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 
@@ -115,10 +118,12 @@ export default function AboutKurumeKasuri() {
                   </h2>
 
                   <div className="aspect-[3/2] relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/about-kurumekasuri/inoue-den-discovery.png"
                       alt="井上伝の発見 - 色褪せた藍染め布がほどかれた瞬間"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 
@@ -194,10 +199,12 @@ export default function AboutKurumeKasuri() {
                     </h4>
                     
                     <div className="aspect-video relative overflow-hidden rounded-lg">
-                      <img 
+                      <Image 
                         src="/images/about-kurumekasuri/process-kukuri-tying.png"
                         alt="括り作業 - 職人が麻の繊維で糸を括る様子"
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 900px"
                       />
                     </div>
 
@@ -219,10 +226,12 @@ export default function AboutKurumeKasuri() {
                     </h4>
                     
                     <div className="aspect-video relative overflow-hidden rounded-lg">
-                      <img 
+                      <Image 
                         src="/images/about-kurumekasuri/process-aizome-dyeing.png"
                         alt="藍染め工程 - 職人が藍甕に糸を浸す様子"
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 900px"
                       />
                     </div>
 
@@ -260,10 +269,12 @@ export default function AboutKurumeKasuri() {
                     </h4>
                     
                     <div className="aspect-video relative overflow-hidden rounded-lg">
-                      <img 
+                      <Image 
                         src="/images/about-kurumekasuri/process-ori-weaving.png"
                         alt="織り工程 - ヴィンテージのシャトル織機で織る職人"
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 900px"
                       />
                     </div>
 
@@ -288,10 +299,12 @@ export default function AboutKurumeKasuri() {
                     </h4>
                     
                     <div className="aspect-video relative overflow-hidden rounded-lg">
-                      <img 
+                      <Image 
                         src="/images/about-kurumekasuri/process-shiage-drying.png"
                         alt="仕上げ工程 - 久留米絣の反物が屋外で天日干しされている様子"
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 900px"
                       />
                     </div>
 
@@ -316,10 +329,12 @@ export default function AboutKurumeKasuri() {
                   </h2>
 
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/about-kurumekasuri/kasuri-no-two-alike.png"
                       alt="同じ柄の久留米絣を並べた写真 - かすれの違いが見える"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 
@@ -379,10 +394,12 @@ export default function AboutKurumeKasuri() {
                   </p>
 
                   <div className="aspect-[3/2] relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/about-kurumekasuri/indigo-hands.png"
                       alt="藍染めで染まった職人の手"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 
@@ -479,10 +496,12 @@ export default function AboutKurumeKasuri() {
                   </h2>
 
                   <div className="aspect-video relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/about-kurumekasuri/modern-kasuri-colours.png"
                       alt="カラフルな現代の久留米絣製品のモザイク"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 
@@ -530,10 +549,12 @@ export default function AboutKurumeKasuri() {
                   </h2>
 
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                    <img 
+                    <Image 
                       src="/images/homepage/hero-image.png"
                       alt="Cloud Nine 久留米絣製品 - 馬モチーフのポーチとチャーム"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 900px"
                     />
                   </div>
 

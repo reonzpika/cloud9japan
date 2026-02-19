@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "optimize:about-images": "node scripts/optimize-about-kurumekasuri-images.js"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
