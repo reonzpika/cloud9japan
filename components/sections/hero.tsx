@@ -8,7 +8,7 @@ const HERO_IMAGE = '/images/homepage/hero-image-potrait.png'
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex flex-col md:flex-row">
+    <section id="section-hero" className="relative min-h-[85vh] flex flex-col md:flex-row scroll-mt-20">
       {/* Mobile Image */}
       <div className="md:hidden w-full h-[55vh] relative bg-kinari-light overflow-hidden">
         <Image

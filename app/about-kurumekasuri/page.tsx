@@ -4,61 +4,17 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Header } from '@/components/sections/header'
 import { Footer } from '@/components/sections/footer'
-import { useState, useEffect } from 'react'
+import { TableOfContents } from '@/components/sections/table-of-contents'
 
-// Table of Contents Component
-function TableOfContents() {
-  const [activeSection, setActiveSection] = useState('')
-
-  const sections = [
-    { id: 'section-1', title: '久留米絣とは' },
-    { id: 'section-2', title: '12歳の少女が生んだ伝統' },
-    { id: 'section-3', title: '30の工程、3ヶ月の手仕事' },
-    { id: 'section-4', title: 'なぜ「かすれる」のか' },
-    { id: 'section-5', title: '藍の力' },
-    { id: 'section-6', title: '久留米絣のいま' },
-    { id: 'section-7', title: 'Cloud Nineと久留米絣' },
-  ]
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { rootMargin: '-20% 0px -60% 0px' }
-    )
-
-    sections.forEach(({ id }) => {
-      const element = document.getElementById(id)
-      if (element) observer.observe(element)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  return (
-    <nav className="sticky top-20 space-y-2">
-      <h3 className="text-sm font-semibold text-indigo mb-4">目次</h3>
-      {sections.map(({ id, title }) => (
-        <a
-          key={id}
-          href={`#${id}`}
-          className={`block text-sm py-1 px-3 rounded transition-all ${
-            activeSection === id
-              ? 'text-artisan-gold font-medium bg-indigo-light'
-              : 'text-indigo-muted hover:text-indigo hover:bg-kinari-light'
-          }`}
-        >
-          {title}
-        </a>
-      ))}
-    </nav>
-  )
-}
+const ABOUT_SECTIONS = [
+  { id: 'section-1', title: '久留米絣とは' },
+  { id: 'section-2', title: '12歳の少女が生んだ伝統' },
+  { id: 'section-3', title: '30の工程、3ヶ月の手仕事' },
+  { id: 'section-4', title: 'なぜ「かすれる」のか' },
+  { id: 'section-5', title: '藍の力' },
+  { id: 'section-6', title: '久留米絣のいま' },
+  { id: 'section-7', title: 'Cloud Nineと久留米絣' },
+]
 
 export default function AboutKurumeKasuri() {
   return (
@@ -98,7 +54,7 @@ export default function AboutKurumeKasuri() {
           <div className="grid lg:grid-cols-[250px_1fr] gap-8 lg:gap-12">
             {/* Table of Contents - Desktop Only */}
             <aside className="hidden lg:block">
-              <TableOfContents />
+              <TableOfContents sections={ABOUT_SECTIONS} variant="sidebar" />
             </aside>
 
             {/* Main Content */}

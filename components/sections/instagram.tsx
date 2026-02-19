@@ -12,7 +12,7 @@ const hashtags = [
 
 export function Instagram() {
   return (
-    <section className="py-16 md:py-24 bg-kinari-light">
+    <section id="section-instagram" className="py-16 md:py-24 bg-kinari-light scroll-mt-20">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

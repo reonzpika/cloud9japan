@@ -1,5 +1,7 @@
 import { Header } from '@/components/sections/header'
+import { HOME_TOC_SECTIONS } from '@/lib/home-toc-sections'
 import { AlertBar } from '@/components/sections/alert-bar'
+import { HomePageLayout } from '@/components/sections/home-page-layout'
 import { Hero } from '@/components/sections/hero'
 import { YokoStory } from '@/components/sections/yoko-story'
 import { CarrotPouch } from '@/components/sections/carrot-pouch'
@@ -13,16 +15,18 @@ import { Footer } from '@/components/sections/footer'
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Header tocSections={HOME_TOC_SECTIONS} />
       <AlertBar />
       <Hero />
-      <YokoStory />
-      <CarrotPouch />
-      <Products />
-      <KurumeKasuri />
-      <Functions />
-      <HorseMesse />
-      <Instagram />
+      <HomePageLayout>
+        <YokoStory />
+        <CarrotPouch />
+        <Products />
+        <KurumeKasuri />
+        <Functions />
+        <HorseMesse />
+        <Instagram />
+      </HomePageLayout>
       <Footer />
     </main>
   )
