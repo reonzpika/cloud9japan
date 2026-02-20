@@ -30,7 +30,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-kinari-light hover:text-artisan-gold transition-colors"
             >
-              <span>Instagram:</span>
+              <span>インスタグラム：</span>
               <span>@cloudnine1017</span>
             </a>
           </div>
@@ -39,7 +39,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-kinari-light/20 text-center">
           <p className="text-sm text-kinari-light">
-            © {currentYear} Cloud Nine. All rights reserved.
+            © {currentYear} Cloud Nine
           </p>
         </div>
       </div>

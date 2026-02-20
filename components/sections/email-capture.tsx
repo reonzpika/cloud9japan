@@ -24,12 +24,12 @@ export function EmailCapture() {
       return
     }
     const data = await res.json().catch(() => ({}))
-    setError(typeof data.error === 'string' ? data.error : 'Subscription failed')
+    setError(typeof data.error === 'string' ? data.error : '登録に失敗しました')
     setStatus('idle')
   }
 
   return (
-    <section className="py-16 md:py-24 bg-kinari">
+    <section id="section-email-signup" className="py-16 md:py-24 bg-kinari scroll-mt-20">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,9 +41,8 @@ export function EmailCapture() {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-indigo">
             ホースメッセに来られない方へ
           </h2>
-          <p className="text-indigo-muted">Can&apos;t make it to Horse Messe?</p>
           <p className="text-indigo-muted">
-            新作情報をいち早くお届けします / Be first to see new pieces
+            新作情報をいち早くお届けします
           </p>
 
           <div className="border-t border-indigo-light w-16 mx-auto" aria-hidden />
@@ -51,7 +50,7 @@ export function EmailCapture() {
           {status === 'success' ? (
             <div className="space-y-2">
               <p className="text-indigo font-medium text-center">
-                「ありがとうございます」/ Thank you for signing up
+                ありがとうございます
               </p>
               <p className="text-sm text-indigo-muted">
                 新作情報をお届けします。ホースメッセでお会いしましょう！
@@ -65,7 +64,7 @@ export function EmailCapture() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="メールアドレス / Email address"
+                    placeholder="メールアドレス"
                     required
                     disabled={status === 'submitting'}
                     className="border border-indigo-light rounded-md px-4 py-3 bg-white text-indigo placeholder:text-indigo-muted focus:outline-none focus:border-artisan-gold w-full"
@@ -75,17 +74,17 @@ export function EmailCapture() {
                     disabled={status === 'submitting'}
                     className="bg-artisan-gold hover:bg-artisan-gold/90 text-white font-medium px-6 py-3 rounded-md transition-all duration-300 active:scale-95 disabled:opacity-70 disabled:pointer-events-none shrink-0"
                   >
-                    {status === 'submitting' ? '登録中...' : '登録する / Sign Up'}
+                    {status === 'submitting' ? '登録中...' : '登録する'}
                   </button>
                 </div>
                 {error && (
                   <p className="text-sm text-terracotta">
-                    送信に失敗しました。もう一度お試しください。 / Something went wrong. Please try again.
+                    送信に失敗しました。もう一度お試しください。
                   </p>
                 )}
               </form>
               <p className="text-xs text-indigo-muted text-center">
-                プライバシーポリシーに基づき、メールアドレスは厳重に管理します。 / Your email is kept private and never shared.
+                プライバシーポリシーに基づき、メールアドレスは厳重に管理します。
               </p>
             </>
           )}

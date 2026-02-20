@@ -22,7 +22,7 @@ export function Hero() {
       </div>
       
       {/* Image (side-by-side: desktop only) */}
-      <div className="hidden lg:block lg:w-1/2 relative bg-kinari-light overflow-hidden min-h-[85vh]">
+      <div className="hidden lg:block lg:w-1/2 max-h-[85vh] relative bg-kinari-light overflow-hidden min-h-[85vh]">
         <Image
           src={HERO_IMAGE}
           alt="Cloud Nine - 馬を愛するあなたへ"

@@ -68,7 +68,7 @@ export function Instagram() {
           </div>
 
           {/* CTA */}
-          <div className="pt-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://www.instagram.com/cloudnine1017"
               target="_blank"
@@ -76,6 +76,14 @@ export function Instagram() {
               className="inline-flex items-center justify-center px-6 py-3 bg-indigo hover:bg-indigo-dark text-white font-medium text-lg rounded-md transition-all duration-300 active:scale-95"
             >
               Instagramをフォローする
+            </a>
+            <a
+              href="https://www.instagram.com/cloudnine1017"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-muted hover:text-artisan-gold text-sm transition-colors"
+            >
+              お問い合わせはDMで
             </a>
           </div>
         </motion.div>

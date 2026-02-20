@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { label: 'ホーム', href: '/' },
   { label: '久留米絣を知る', href: '/about-kurumekasuri' },
   { label: 'ホースメッセ', href: '/#horse-messe-section' },
+  { label: 'お問い合わせ', href: '/#section-email-signup' },
 ] as const
 
 export type HeaderTocSection = { id: string; title: string }

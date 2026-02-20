@@ -30,6 +30,7 @@ export default function Home() {
         <HorseMesse />
         <EmailCapture />
         <Instagram />
+        <div className="bg-kinari min-h-[120px] md:min-h-[160px]" aria-hidden />
       </HomePageLayout>
       <Footer />
     </main>
