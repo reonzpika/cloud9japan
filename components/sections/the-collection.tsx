@@ -1,70 +1,70 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
-const products = [
+type Product = {
+  id: number
+  nameJP: string
+  nameEN: string
+  price: string
+  description: string
+  status: 'available' | 'sold' | 'reserve'
+  images: string[]
+}
+
+const products: Product[] = [
   {
     id: 1,
+    nameJP: '馬刺繍 スマホポーチ',
+    nameEN: 'Phone Case Bag',
+    price: '¥12,000',
+    description: '金糸で描いた、走る馬。',
+    status: 'sold' as const,
+    images: [
+      '/images/homepage/collections/phonecase-bag-front.png',
+      '/images/homepage/collections/phonecase-bag-back.png',
+    ],
+  },
+  {
+    id: 2,
     nameJP: '久留米絣 ショルダーバッグ',
     nameEN: 'Kasuri Shoulder Bag',
     price: '¥28,000',
     description: '厩舎から街へ。毎日連れていきたいバッグ。',
     status: 'available' as const,
-    image: '/images/products/product-01.jpg',
-  },
-  {
-    id: 2,
-    nameJP: '馬刺繍 スマホポーチ',
-    nameEN: 'Horse Embroidery Phone Pouch',
-    price: '¥12,000',
-    description: '金糸で描いた、走る馬。',
-    status: 'sold' as const,
-    image: '/images/products/product-02.jpg',
+    images: [
+      '/images/homepage/collections/shoulder-bag.png',
+      '/images/homepage/collections/shoulder-bag-lifestyle.png',
+    ],
   },
   {
     id: 3,
-    nameJP: '久留米絣 馬のぬいぐるみ',
-    nameEN: 'Kasuri Horse Toy',
-    price: '¥6,500',
-    description: '世界に一つの、あなただけの馬。',
+    nameJP: '久留米絣 ペンケース',
+    nameEN: 'Pencil Case',
+    price: '¥3,500',
+    description: '藍の温もりを、毎日の筆箱に。',
     status: 'available' as const,
-    image: '/images/products/product-03.jpg',
+    images: ['/images/homepage/collections/pencil-case.png'],
   },
   {
     id: 4,
-    nameJP: '久留米絣 巾着ポーチ',
-    nameEN: 'Kasuri Drawstring Pouch',
-    price: '¥4,500',
-    description: '馬チャームとにんじん付き。贈り物にも。',
+    nameJP: '久留米絣 馬のぬいぐるみ',
+    nameEN: 'Stuffed Horses',
+    price: '¥6,500',
+    description: '世界に一つの、あなただけの馬。',
     status: 'available' as const,
-    image: '/images/products/product-04.jpg',
+    images: ['/images/homepage/collections/stuffed-horses.png'],
   },
   {
     id: 5,
-    nameJP: 'にんじんポーチ',
-    nameEN: 'Carrot Zipper Pouch',
-    price: '¥5,500',
-    description: '馬の刺繍とにんじんストラップ。毎日の相棒に。',
+    nameJP: '久留米絣 大巾着',
+    nameEN: 'Large Drawstring Pouch',
+    price: '¥4,500',
+    description: '馬チャームとにんじん付き。贈り物にも。',
     status: 'available' as const,
-    image: '/images/products/product-05.jpg',
-  },
-  {
-    id: 6,
-    nameJP: '久留米絣 クッションカバー',
-    nameEN: 'Kasuri Cushion Cover',
-    price: '¥14,000',
-    description: '馬のいる部屋をつくる。',
-    status: 'available' as const,
-    image: '/images/products/product-06.jpg',
-  },
-  {
-    id: 7,
-    nameJP: '久留米絣 大判ストール',
-    nameEN: 'Kasuri Large Stole',
-    price: '¥18,000',
-    description: '馬場でも、街でも。藍の温もりを羽織る。',
-    status: 'available' as const,
-    image: '/images/products/product-07.jpg',
+    images: ['/images/homepage/collections/large-pouch.png'],
   },
 ]
 
@@ -85,6 +85,63 @@ const cardVariants = {
     y: 0,
     transition: { duration: 0.5 },
   },
+}
+
+const SLIDESHOW_INTERVAL_MS = 4000
+
+function ProductCardImage({
+  images,
+  alt,
+  productId,
+}: {
+  images: string[]
+  alt: string
+  productId: number
+}) {
+  const [index, setIndex] = useState(0)
+  const isSlideshow = images.length > 1
+
+  useEffect(() => {
+    if (!isSlideshow) return
+    const t = setInterval(() => {
+      setIndex((i) => (i + 1) % images.length)
+    }, SLIDESHOW_INTERVAL_MS)
+    return () => clearInterval(t)
+  }, [isSlideshow, images.length])
+
+  return (
+    <div className="relative h-full w-full">
+      {images.map((src, i) => (
+        <div
+          key={`${productId}-${src}`}
+          className="absolute inset-0 transition-opacity duration-500 ease-in-out"
+          style={{ opacity: i === index ? 1 : 0 }}
+          aria-hidden={i !== index}
+        >
+          <Image
+            src={src}
+            alt={i === index ? alt : ''}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          />
+        </div>
+      ))}
+      {isSlideshow && (
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => setIndex(i)}
+              className={`h-1.5 w-1.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-artisan-gold focus:ring-offset-2 focus:ring-offset-indigo-light ${i === index ? 'bg-artisan-gold' : 'bg-white/50'}`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
 }
 
 function StatusBadge({ status }: { status: 'available' | 'sold' | 'reserve' }) {
@@ -141,8 +198,7 @@ export function TheCollection() {
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
+          animate="visible"
         >
           {products.map((product) => (
             <motion.article
@@ -150,12 +206,12 @@ export function TheCollection() {
               variants={cardVariants}
               className="overflow-hidden rounded-lg bg-kinari"
             >
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <div className="flex h-full w-full items-center justify-center bg-indigo-light">
-                  <span className="font-sans text-sm text-indigo-muted">
-                    画像準備中
-                  </span>
-                </div>
+              <div className="relative aspect-[3/4] overflow-hidden bg-indigo-light">
+                <ProductCardImage
+                  images={product.images}
+                  alt={product.nameJP}
+                  productId={product.id}
+                />
                 <StatusBadge status={product.status} />
               </div>
               <div className="p-4">
@@ -167,9 +223,6 @@ export function TheCollection() {
                 </p>
                 <p className="mt-2 font-sans text-xs leading-relaxed text-indigo-muted">
                   {product.description}
-                </p>
-                <p className="mt-3 font-sans text-sm text-indigo-muted">
-                  {product.price}
                 </p>
                 {product.status !== 'sold' ? (
                   <a
@@ -188,6 +241,42 @@ export function TheCollection() {
               </div>
             </motion.article>
           ))}
+          <motion.article
+            variants={cardVariants}
+            className="overflow-hidden rounded-lg bg-kinari"
+          >
+            <div className="relative aspect-[3/4] overflow-hidden bg-indigo-light">
+              <Image
+                src="/images/homepage/hero-image.png"
+                alt="Cloud Nine – クラウドナイン"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="font-serif text-base font-semibold text-indigo">
+                ほかにもさまざまな作品があります
+              </h3>
+              <p className="mt-0.5 font-sans text-xs tracking-wide text-indigo-muted">
+                We have many more different products
+              </p>
+              <p className="mt-2 font-sans text-xs leading-relaxed text-indigo-muted">
+                ハンカチ、キーホルダー、ミニショルダーなど。ホースメッセでお手に取ってご覧ください。
+              </p>
+              <p className="mt-2 font-sans text-xs leading-relaxed text-indigo-muted">
+                Handkerchiefs, keyholders, mini shoulder bags and more. Come see them at Horse Messe.
+              </p>
+              <a
+                href="https://instagram.com/cloudnine1017"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block font-sans text-xs text-artisan-gold transition-colors hover:text-indigo"
+              >
+                Instagramで続きを見る →
+              </a>
+            </div>
+          </motion.article>
         </motion.div>
       </div>
 

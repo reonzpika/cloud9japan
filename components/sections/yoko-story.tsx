@@ -23,7 +23,7 @@ function ProfileImage({ src, name }: { src: string; name: string }) {
             src={src}
             alt={name}
             fill
-            className="object-cover"
+            className="object-cover scale-130"
             sizes="80px"
             onError={() => setError(true)}
           />
@@ -53,7 +53,7 @@ export function YokoStory() {
             {/* 8歳の出会い + Yoko profile */}
             <div className="space-y-3">
               <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                <ProfileImage src="/images/profiles/yoko.jpg" name="Yoko" />
+                <ProfileImage src="/images/homepage/yoko.png" name="Yoko" />
                 <div className="space-y-3 flex-1">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
                     8歳の出会い
@@ -68,7 +68,7 @@ export function YokoStory() {
             {/* Marshallとの出会いが、すべてを変えた */}
             <div className="space-y-3">
               <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                <ProfileImage src="/images/profiles/marshall.jpg" name="Marshall" />
+                <ProfileImage src="/images/homepage/marshall.png" name="Marshall" />
                 <div className="space-y-3 flex-1">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
                     Marshallとの出会いが、すべてを変えた
@@ -86,7 +86,7 @@ export function YokoStory() {
             {/* Lucasとの日々 */}
             <div className="space-y-3">
               <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                <ProfileImage src="/images/profiles/lucas.jpg" name="Lucas" />
+                <ProfileImage src="/images/homepage/lucas.png" name="Lucas" />
                 <div className="space-y-3 flex-1">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-indigo">
                     Lucasとの日々
