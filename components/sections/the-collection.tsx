@@ -183,7 +183,7 @@ export function TheCollection() {
             作品集
           </h2>
           <p className="mt-2 font-sans text-base font-medium uppercase tracking-widest text-indigo-muted">
-            The Collection
+            作品集
           </p>
           <p className="mx-auto mt-4 max-w-xl font-sans text-center text-sm text-indigo-muted md:text-base">
             すべて一点もの。同じものは二つとありません。
