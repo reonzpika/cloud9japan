@@ -32,12 +32,20 @@ export function Instagram() {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-indigo">
-            制作の様子、MarshallとLucasとの日々
+            制作の様子、Lucasとの日々
           </h2>
 
           <div className="space-y-4">
             <p className="text-lg text-indigo-muted">
-              @cloudnine1017 で、新作の制作過程や、Marshall・Lucasとの暮らしを投稿しています。
+              <a
+                href="https://www.instagram.com/cloudnine1017"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-artisan-gold hover:underline"
+              >
+                @cloudnine1017
+              </a>{' '}
+              で、新作の制作過程や、Lucasとの暮らしを投稿しています。
             </p>
             <p className="text-base text-indigo-muted">
               手作業で一つ一つ作られる過程や、馬たちとの何気ない瞬間を、ぜひご覧ください。

@@ -8,7 +8,9 @@ import { CarrotPouch } from '@/components/sections/carrot-pouch'
 import { Products } from '@/components/sections/products'
 import { KurumeKasuri } from '@/components/sections/kurume-kasuri'
 import { Functions } from '@/components/sections/functions'
+import { TheCollection } from '@/components/sections/the-collection'
 import { HorseMesse } from '@/components/sections/horse-messe'
+import { EmailCapture } from '@/components/sections/email-capture'
 import { Instagram } from '@/components/sections/instagram'
 import { Footer } from '@/components/sections/footer'
 
@@ -24,7 +26,9 @@ export default function Home() {
         <Products />
         <KurumeKasuri />
         <Functions />
+        <TheCollection />
         <HorseMesse />
+        <EmailCapture />
         <Instagram />
       </HomePageLayout>
       <Footer />

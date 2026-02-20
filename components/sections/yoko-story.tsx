@@ -74,10 +74,10 @@ export function YokoStory() {
                     Marshallとの出会いが、すべてを変えた
                   </h3>
                   <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                    40年後、ふとしたきっかけで訪れた乗馬クラブで、Marshallに出会いました。彼は菊花賞を走った元競走馬。脚を痛めて引退し、なぜか私のもとにやってきました。
+                    40年後、ふとしたきっかけで訪れた乗馬クラブでMarshallに出会いました。彼は、菊花賞にも出たことのある元競走馬。脚を痛めて引退したあと、なぜかど素人の私のところにやってきたんです。
                   </p>
                   <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                    馬は1メートル離れた場所から人の心臓の音が聴こえると言われています。Marshallは私が疲れている日にはそっと寄り添い、子育てで心が折れそうな時も静かに支えてくれました。彼は、私にとって家族であり、友であり、人生の先生です。
+                    馬は1メートルほど離れたところから人の心臓の音が聴こえるといいます。調子が悪い日にはそっと寄り添ってくれて、子育てで大変な時期も、Marshallにたくさん助けられました。彼は、私にとって家族であり、友であり、人生の先生でした。
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export function YokoStory() {
                     その後、Lucasが家族に加わりました。彼は3歳での引退を余儀なくされた若い馬で、人への不信感を抱えていました。時間をかけて少しずつ心を開いてくれるようになり、今も一緒に成長を続けています。この3月には、彼と初めての競技会に出る予定です。
                   </p>
                   <p className="text-base md:text-lg text-indigo-muted leading-relaxed">
-                    二頭と過ごす時間が、今の私の人生の中心です。
+                    Lucasと過ごす時間が、今の私の人生の中心です。
                   </p>
                 </div>
               </div>

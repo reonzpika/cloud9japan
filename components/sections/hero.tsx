@@ -4,37 +4,37 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 
-const HERO_IMAGE = '/images/homepage/hero-image-potrait.png'
+const HERO_IMAGE = '/images/homepage/hero-image.png'
 
 export function Hero() {
   return (
-    <section id="section-hero" className="relative min-h-[85vh] flex flex-col md:flex-row scroll-mt-20">
-      {/* Mobile Image */}
-      <div className="md:hidden w-full h-[55vh] relative bg-kinari-light overflow-hidden">
+    <section id="section-hero" className="relative min-h-[85vh] flex flex-col lg:flex-row scroll-mt-20">
+      {/* Image (vertical stack: mobile + tablet) */}
+      <div className="lg:hidden w-full min-h-[min(max(70vh,66.67vw),133.33vw)] md:min-h-[min(max(75vh,66.67vw),133.33vw)] max-h-[133.33vw] relative bg-kinari-light overflow-hidden">
         <Image
           src={HERO_IMAGE}
           alt="Cloud Nine - 馬を愛するあなたへ"
           fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-bottom"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           priority
         />
       </div>
       
-      {/* Desktop Image */}
-      <div className="hidden md:block md:w-1/2 relative bg-kinari-light overflow-hidden min-h-[85vh]">
+      {/* Image (side-by-side: desktop only) */}
+      <div className="hidden lg:block lg:w-1/2 relative bg-kinari-light overflow-hidden min-h-[85vh]">
         <Image
           src={HERO_IMAGE}
           alt="Cloud Nine - 馬を愛するあなたへ"
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           priority
         />
       </div>
       
       {/* Text Content */}
-      <div className="w-full md:w-1/2 bg-kinari px-6 py-8 md:px-20 md:py-20 flex flex-col justify-center">
+      <div className="w-full lg:w-1/2 bg-kinari px-6 py-8 md:px-20 md:py-20 flex flex-col justify-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
