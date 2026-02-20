@@ -61,12 +61,11 @@ export default function AboutKurumeKasuri() {
             {/* Main Content */}
             <article className="space-y-20 md:space-y-28">
               
-              {/* Section 1: 久留米絣とは */}
+              {/* Section 1: 久留米絣とは - animate on load so first image shows immediately */}
               <section id="section-1" className="scroll-mt-20">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   className="space-y-8"
                 >

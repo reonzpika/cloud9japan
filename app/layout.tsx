@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
+import { GoogleTranslatePrompt } from "@/components/google-translate-prompt";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="ja" className={`${notoSansJP.variable} ${notoSerifJP.variable}`}>
       <body className="font-sans bg-kinari text-indigo antialiased">
         {children}
+        <GoogleTranslatePrompt />
       </body>
     </html>
   );
